@@ -1,0 +1,76 @@
+.container-memory {
+  text-align: center;
+}
+
+.title-memory {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #007965;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  background-color: #f58634;
+  border-radius: 5px;
+  border: none;
+  margin: 4px;
+  color: #f5f4f4;
+  cursor: pointer;
+}
+
+.restart {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  background-color: #00af91;
+  text-transform: uppercase;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  margin: 4px;
+}
+
+.counter {
+  width: 170px;
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffcc29;
+  text-align: center;
+  margin: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.counter > span {
+  color: #007965;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 456px) {
+  button {
+    width: 80px;
+    height: 80px;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  button {
+    width: 60px;
+    height: 60px;
+  }
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+/*# sourceMappingURL=style-memory.css.map */

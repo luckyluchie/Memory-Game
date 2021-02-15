@@ -2,13 +2,13 @@ const memoryGrid = document.querySelector('.memory-grid')
 const btnRestart = document.querySelector('.restart')
 
 let gameTable = [
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0]
 ]
+
+
 
 let gameTableReturn = randomTableGenerator()
 
@@ -47,41 +47,21 @@ function showGameTable () {
 function getImage(value) {
   let imgContent = ""
   switch (value) {
-    case 1 : imgContent = "images/adele.jpg"
+    case 1 : imgContent = "images/14-18-plaque.png"
     break;
-    case 2 : imgContent = "images/buzz.jpg"
+    case 2 : imgContent = "images/croix.jpg"
     break;
-    case 3 : imgContent = "images/elsa.jpg"
+    case 3 : imgContent = "images/croix-cimetiere.jpg"
     break;
-    case 4 : imgContent = "images/lloris.jpg"
+    case 4 : imgContent = "images/ecole1962.jpg"
     break;
-    case 5 : imgContent = "images/lollirocks.jpg"
+    case 5 : imgContent = "images/eglise.png"
     break;
-    case 6 : imgContent = "images/lollirocks2.jpg"
+    case 6 : imgContent = "images/fusion.jpg"
     break;
-    case 7 : imgContent = "images/mario.jpg"
+    case 7 : imgContent = "images/logo.jpg"
     break;
-    case 8 : imgContent = "images/mbappe.jpg"
-    break;
-    case 9 : imgContent = "images/minions.jpg"
-    break;
-    case 10 : imgContent = "images/my-little-poney1.jpg"
-    break;
-    case 11 : imgContent = "images/my-little-poney2.jpg"
-    break;
-    case 12 : imgContent = "images/olaf.jpg"
-    break;
-    case 13 : imgContent = "images/simba.jpg"
-    break;
-    case 14 : imgContent = "images/spiderman.jpg"
-    break;
-    case 15 : imgContent = "images/toad.jpg"
-    break;
-    case 16 : imgContent = "images/toy-story.jpg"
-    break;
-    case 17 : imgContent = "images/wario.jpg"
-    break;
-    case 18 : imgContent = "images/yoshi.jpg"
+    case 8 : imgContent = "images/page-de-couv.jpg"
     break;
     default : console.log('error')
   }
@@ -91,7 +71,7 @@ function getImage(value) {
 // function called onClick images buttons
 function verif(bouton) {
   scoreCounter++
-  counter.innerHTML = `<span>Tu as cliqué ${scoreCounter} fois</span>`
+  counter.innerHTML = `<span>Vous avez cliqué ${scoreCounter} fois</span>`
   if (ok) {
     nbShowed++
 
@@ -123,14 +103,14 @@ function verif(bouton) {
 // Place images randomly
 function randomTableGenerator () {
   let table = []
-  let imgPosition = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  let imgPosition = [0, 0, 0, 0, 0, 0, 0, 0]
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 4; i++) {
     let row = []
-    for (let j = 0; j < 6; j++) {
+    for (let j = 0; j < 4; j++) {
       let end = false
       while (!end) {
-        let randomImage = Math.floor(Math.random() * 18)
+        let randomImage = Math.floor(Math.random() * 8)
         // to be sure that tere is only to example of one image
         if (imgPosition[randomImage] < 2) {
           row.push(randomImage+1)

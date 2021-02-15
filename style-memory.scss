@@ -1,15 +1,8 @@
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Gloria Hallelujah', cursive;
-}
-
-.container {
+.container-memory {
   text-align: center;
 }
 
-h1 {
+.title-memory {
   margin-top: 2rem;
   text-transform: uppercase;
   font-size: 2.5rem;
@@ -20,7 +13,6 @@ button {
   width: 100px;
   height: 100px;
   background-color: #f58634;
-  font-family: 'Gloria Hallelujah', cursive;
   border-radius: 5px;
   border: none;
   margin: 4px;
@@ -57,4 +49,28 @@ img {
 .counter>span {
   color: #007965;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 456px) {
+  button {
+    width: 80px;
+    height: 80px;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  button {
+    width: 60px;
+    height: 60px;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
 }
